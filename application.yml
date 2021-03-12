@@ -1,0 +1,16 @@
+spring:
+  h2:
+    console:
+      enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:9004/eureka}
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+       
