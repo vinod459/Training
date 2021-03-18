@@ -1,0 +1,8 @@
+server:  port: 9006  eureka:  client:    serviceUrl:      defaultZone: ${EUREKA_URI:http://localhost:9004/eureka}      
+spring:  application:    name: Cloud-Config-Server
+  cloud:
+    config:
+      server:
+        git:          default-label: main
+          uri: "https://github.com/vinod459/Training"
+          clone-on-start: true
